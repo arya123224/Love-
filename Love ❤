@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Pragya 💖</title>
+<style>
+  body {
+    background: linear-gradient(#1a1a2e, #162447);
+    color: #f5f3f4;
+    font-family: 'Georgia', serif;
+    text-align: center;
+    padding: 50px;
+    overflow: hidden;
+  }
+  h1 {
+    font-family: 'Cursive', serif;
+    font-size: 3em;
+    color: #ffd700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px #000;
+  }
+  p {
+    font-size: 1.5em;
+    margin: 20px auto;
+    width: 80%;
+  }
+  .gift-box {
+    margin: 30px auto;
+    width: 200px;
+    height: 200px;
+    background: url('https://i.imgur.com/4M7IWwP.png') no-repeat center/contain;
+    animation: float 3s ease-in-out infinite alternate;
+  }
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-20px); }
+  }
+  .sparkle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #ffd700;
+    border-radius: 50%;
+    animation: sparkle 3s linear infinite;
+  }
+  @keyframes sparkle {
+    0% { transform: translateY(0) scale(1); opacity:1;}
+    100% { transform: translateY(-600px) scale(0.5); opacity:0;}
+  }
+</style>
+</head>
+<body>
+<h1>Magic for Pragya ✨</h1>
+<p>Dear Pragya,<br><br>
+This magical message is from Harsh 💖. Just like Hogwarts, you bring magic into my life every day! I’ve prepared some special gifts and a little love spell just for you. May this message make your heart sparkle like a Patronus! 🪄</p>
+
+<div class="gift-box"></div>
+
+<p>Always yours,<br>Harsh</p>
+
+<script>
+// create magical sparkles
+for(let i=0; i<50; i++){
+  let sparkle = document.createElement('div');
+  sparkle.className = 'sparkle';
+  sparkle.style.left = Math.random()*100 + 'vw';
+  sparkle.style.animationDuration = (2+Math.random()*3) + 's';
+  sparkle.style.width = sparkle.style.height = (2+Math.random()*4) + 'px';
+  document.body.appendChild(sparkle);
+}
+</script>
+</body>
+</html>
